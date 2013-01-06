@@ -17,7 +17,4 @@ class App < Sinatra::Base
       body "Body: #{contents}"
     end
   end
-  run! if app_file == $0
 end
-
-

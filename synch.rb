@@ -8,6 +8,5 @@ class App < Sinatra::Base
     contents = ::Net::HTTP.get_response(URI(SLOW_API)).body
     body "Body: #{contents}"
   end
-  run! if app_file == $0
 end
 
