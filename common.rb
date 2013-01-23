@@ -1,4 +1,4 @@
-SLOW_API = "http://slowapi.com/delay/5.0"
+SLOW_API = "http://slowapi.herokuapp.com/delay/3.0"
 require 'sinatra'
 require 'sinatra/base'
 require 'net/http'
