@@ -1,3 +1,6 @@
+# This is Async-Sinatra powered app
+# it uses EventMachine Deferrable as response object
+# and then uses that as a response by invoking ether callback or errback
 require './common'
 
 require 'async_sinatra'
@@ -8,13 +11,13 @@ class App < Sinatra::Base
   register Sinatra::Async
 
   aget '/' do
-    logger.info "Calling slow api"
+    logger.info "Async Calling slow api"
 
     connection = EM::HttpRequest.new(SLOW_API).get
     connection.callback do |response|
-      logger.info "Ok, we got stuff"
       contents = connection.response
-      body "Body: #{contents}"
+      logger.info "Async We got body"
+      body "Async Body: #{contents}\n"
     end
   end
 end
