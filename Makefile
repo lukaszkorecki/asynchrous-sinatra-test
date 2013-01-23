@@ -16,6 +16,13 @@ em-stop:
 	FF=emasync.rb $(thin_cmd) $(em_pid) stop
 em-log:
 	tail -f em-async.log
+em-test:
+	curl localhost:$(em_port) &
+	curl localhost:$(em_port) &
+	curl localhost:$(em_port) &
+	curl localhost:$(em_port) &
+	curl localhost:$(em_port) &
+
 
 as-start:
 	FF=asyncs.rb $(thin_cmd) $(as_pid) -p $(as_port) -l async.log start
@@ -23,6 +30,12 @@ as-stop:
 	FF=asyncs.rb $(thin_cmd) $(as_pid) stop
 as-log:
 	tail -f async.log
+asc-test:
+	curl localhost:$(as_port) &
+	curl localhost:$(as_port) &
+	curl localhost:$(as_port) &
+	curl localhost:$(as_port) &
+	curl localhost:$(as_port) &
 
 
 sync-start:
@@ -31,3 +44,9 @@ sync-stop:
 	FF=synch.rb $(thin_cmd) $(sync_pid) stop
 sync-log:
 	tail -f synch.log
+sync-test:
+	curl localhost:$(syn_port) &
+	curl localhost:$(syn_port) &
+	curl localhost:$(syn_port) &
+	curl localhost:$(syn_port) &
+	curl localhost:$(syn_port) &
