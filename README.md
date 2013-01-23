@@ -11,7 +11,7 @@ This repo contains some examples and very, very basic test showing how stuff wor
 
 Now that you have the dependencies you can start serves and run some simple tests.
 
-Everthing is managed thourgh [make](http://www.gnu.org/software/make/) - because it's simple, everyhere and allows parallel execution of tasks.
+Everything is managed though [make](http://www.gnu.org/software/make/) - because it's simple, everywhere and allows parallel execution of tasks.
 
 Example session:
 
@@ -96,6 +96,5 @@ I, [2013-01-23T22:49:42.473966 #94255]  INFO -- : Synchronous We got body
 I, [2013-01-23T22:49:42.474924 #94255]  INFO -- : Synchronous Calling slow api
 I, [2013-01-23T22:49:45.723494 #94255]  INFO -- : Synchronous We got body
 127.0.0.1 - - [23/Jan/2013 22:49:45] "GET / HTTP/1.1" 200 40 3.2494
-k
 
 ```
